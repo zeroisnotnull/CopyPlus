@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "КопиПлюс",
+    "version": "1.0.0",
+    "description": "Управляйте историей буфера обмена с легкостью и удобством - Создано Browserx.ru",
+    "permissions": [
+      "storage",
+      "clipboardRead",
+      "clipboardWrite",
+      "scripting",
+      "activeTab",
+      "contextMenus"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "96": "icon96.png"
+      }
+    },
+    "icons": {
+      "96": "icon96.png"
+    }
+}

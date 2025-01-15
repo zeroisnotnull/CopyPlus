@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>КопиПлюс</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <div class="container">
+    <div class="headerx">
+        <h1>КопиПлюс</h1>
+        <p>Управляйте историей буфера обмена с легкостью и удобством.</p>
+      </div>
+    <div class="header">
+      <div class="header-top">
+        <h1>Статус</h1>
+        <label class="switch">
+          <input type="checkbox" id="activationToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+     
+      <div class="status-text" id="statusText"></div>
+      
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Поиск скопированных элементов...">
+      </div>
+    </div>
+    
+    <div class="clipboard-list" id="clipboardList">
+      <!-- Clipboard items will be inserted here -->
+    </div>
+    
+    <div class="footer">
+      <button id="clearAll" class="clear-btn">Очистить всю историю</button>
+    </div>
+
+    <div id="copyNotification" class="copy-notification">
+      <span class="material-icons">check_circle</span>
+      Скопировано в буфер обмена!
+    </div>
+    <div class="rating-section">
+        <div class="rating-text">Оцените нас в Chrome Web Store</div>
+        <div class="stars">
+          <span class="star" data-rating="1">★</span>
+          <span class="star" data-rating="2">★</span>
+          <span class="star" data-rating="3">★</span>
+          <span class="star" data-rating="4">★</span>
+          <span class="star" data-rating="5">★</span>
+        </div>
+      </div>
+      <div class="footer">
+        Все права защищены, 2025 - <a href="https://browserx.ru/?ref=CopyPlus" target="_blank">BrowserX</a>
+      </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
