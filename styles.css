@@ -179,10 +179,12 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     transition: all 0.2s ease;
     border: 1px solid #e8eaf6;
     cursor: pointer;
+    min-height: 60px;
+    position: relative;
   }
   
   .clipboard-item:hover {
@@ -193,17 +195,18 @@
   
   .item-content {
     flex: 1;
-    margin-right: 16px;
+    margin-right: 36px;
+    overflow: hidden;
   }
   
   .clipboard-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     font-size: 14px;
     color: #333;
     line-height: 1.4;
     margin-bottom: 4px;
+    max-width: 100%;
   }
   
   .time-text {
@@ -223,6 +226,9 @@
     justify-content: center;
     width: 28px;
     height: 28px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
   }
   
   .delete-btn .material-icons {
