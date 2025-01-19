@@ -6,10 +6,7 @@
     "permissions": [
       "storage",
       "clipboardRead",
-      "clipboardWrite",
-      "scripting",
-      "activeTab",
-      "contextMenus"
+      "clipboardWrite"
     ],
     "host_permissions": [
       "<all_urls>"
